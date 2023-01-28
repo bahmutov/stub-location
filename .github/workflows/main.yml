@@ -4,6 +4,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cypress E2E tests 🧪
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm start
+
   component-tests:
     runs-on: ubuntu-latest
     steps:

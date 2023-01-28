@@ -1,15 +1,20 @@
-// https://glebbahmutov.com/blog/stub-react-import/#move-the-side-effect
+import setupDebug from 'debug'
 
-/** This common object wraps around things we cannot stub
- * like window.locations methods which are locked for security reasons
- * But, we can stub Location's methods
- * In you app this would be in a common lib
- */
+const debug = setupDebug('location')
+
 export const Location = {
   assign(url: string) {
+    debug('assign %s', url)
     window.location.assign(url)
   },
   replace(url: string) {
+    debug('replace %s', url)
     window.location.replace(url)
   }
+}
+
+// @ts-ignore
+if (window.Cypress) {
+  // @ts-ignore
+  window.Location = Location
 }

@@ -5,8 +5,8 @@
   "private": false,
   "license": "UNLICENSED",
   "dependencies": {
-    "@emotion/styled": "^11.10.5",
     "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@material-ui/core": "4.12.4",
     "@material-ui/icons": "4.11.3",
     "@material-ui/lab": "4.0.0-alpha.61",
@@ -16,6 +16,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@xstate/react": "3.0.2",
+    "debug": "^4.3.4",
     "formik": "2.2.9",
     "i18next": "22.4.9",
     "mobx": "6.7.0",
@@ -40,7 +41,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint --ext=.js,.ts,.tsx",
     "typecheck": "tsc --noEmit",
@@ -49,7 +49,8 @@
     "cy:open-ct": "cypress open --component",
     "cy:run-ct": "cypress run --component",
     "cy:run-ct-fast": "yarn cy:run-ct --config video=false screenshot=false useExperimentalComponentTesting=true",
-    "server:test": "server-test 3000 cy:run"
+    "server:test": "server-test 3000 cy:run",
+    "dev": "start-test 3000 cy:open"
   },
   "eslintConfig": {
     "extends": [

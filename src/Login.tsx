@@ -2,9 +2,7 @@ import { Location } from './Location'
 
 export const LoginBtn = () => {
   const handleSubmit = () => {
-    setTimeout(() => {
-      Location.assign('https://cypress.tips')
-    }, 1000)
+    Location.assign('https://cypress.tips')
   }
 
   return (
