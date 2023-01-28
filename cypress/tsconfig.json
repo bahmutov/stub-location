@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "lib": ["esnext", "dom"],
-    "types": ["cypress", "node", "@testing-library/cypress", "cypress-real-events"],
+    "types": ["cypress", "node"],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowJs": true,

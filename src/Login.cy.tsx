@@ -1,4 +1,5 @@
-import { LoginBtn, Location } from './Login'
+import { LoginBtn } from './Login'
+import { Location } from './Location'
 
 describe('Login button', { viewportWidth: 300, viewportHeight: 300 }, () => {
   it.skip('tries to click the button', () => {
