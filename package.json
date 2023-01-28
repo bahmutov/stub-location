@@ -12,11 +12,6 @@
     "@material-ui/lab": "4.0.0-alpha.61",
     "@material-ui/pickers": "3.3.10",
     "@reduxjs/toolkit": "1.9.1",
-    "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "13.4.0",
-    "@testing-library/user-event": "14.4.3",
-    "@types/faker": "6.6.8",
-    "@types/jest": "29.2.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
@@ -51,17 +46,16 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext=.js,.ts,.tsx",
     "typecheck": "tsc --noEmit",
-    "cy:open": "cypress open --e2e --browser chrome",
-    "cy:run": "cypress run --e2e --browser chrome",
-    "cy:open-ct": "cypress open --component --browser chrome",
-    "cy:run-ct": "cypress run --component --browser chrome",
+    "cy:open": "cypress open --e2e",
+    "cy:run": "cypress run --e2e",
+    "cy:open-ct": "cypress open --component",
+    "cy:run-ct": "cypress run --component",
     "cy:run-ct-fast": "yarn cy:run-ct --config video=false screenshot=false useExperimentalComponentTesting=true",
     "server:test": "server-test 3000 cy:run"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ],
     "rules": {
       "no-unused-expressions": "off",
@@ -81,8 +75,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/cypress": "9.0.0",
-    "@types/faker": "6.6.8",
     "@types/ramda": "0.28.22",
     "@types/redux-actions": "2.6.2",
     "@types/redux-thunk": "2.1.0",
